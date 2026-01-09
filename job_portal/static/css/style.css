@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: #0b5ed7;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    background: black;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    min-height: 80vh;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text span {
+    color: #0b5ed7;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #0b5ed7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* STEPS */
+.steps {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f6f8;
+}
+
+.steps h2 {
+    margin-bottom: 30px;
+}
+
+.step-box {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.step {
+    background: #0b5ed7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    line-height: 40px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0b5ed7;
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 200px;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Available Jobs</h2>
+
+<form method="get">
+    <input type="text" name="q" placeholder="Search job">
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+{% for job in jobs %}
+<div style="border:1px solid #ccc; padding:10px; margin:10px;">
+    <h3>{{ job.title }}</h3>
+    <p><b>Company:</b> {{ job.company }}</p>
+    <p><b>Location:</b> {{ job.location }}</p>
+    <a href="{% url 'job_detail' job.id %}">View Details</a>
+</div>
+{% empty %}
+<p>No jobs found</p>
+{% endfor %}
+
+{% endblock %}

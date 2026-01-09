@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Profile</h2>
+
+<p><b>Username:</b> {{ request.user.username }}</p>
+<p><b>Role:</b> {{ profile.role }}</p>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Profile</button>
+</form>
+
+{% if profile.resume %}
+<p>
+    <a href="{{ profile.resume.url }}">View Resume</a>
+</p>
+{% endif %}
+
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
