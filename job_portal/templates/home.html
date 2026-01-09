@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-image">
+        <!-- <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Job Search"> -->
+         <img src="https://img.freepik.com/premium-photo/indian-busin…ner_1106493-494077.jpg?semt=ais_hybrid&w=740&q=80" alt="Job Search" style="border-radius: 50%; width: 480px; height: 480px;">
+    </div>
+    
+    <div class="hero-text">
+        <h1>Find Your <span>Dream Job</span><br>With Your Skills</h1>
+        <p>Connecting job seekers with top companies across India</p>
+
+        <a href="{% url 'job_list' %}" class="btn-primary">Browse Jobs</a>
+    </div>
+
+    
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps">
+    <h2>Easy Steps to Get Your Dream Job</h2>
+
+    <div class="step-box">
+        <div class="step">1</div>
+        <h3>Create Account</h3>
+        <p>Register as Job Seeker or Recruiter</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step">2</div>
+        <h3>Search Jobs</h3>
+        <p>Find jobs that match your skills</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step">3</div>
+        <h3>Apply Job</h3>
+        <p>Apply with a single click</p>
+    </div>
+</section>
+
+{% endblock %}
+

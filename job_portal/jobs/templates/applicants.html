@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Applicants for {{ job.title }}</h2>
+
+{% for app in applications %}
+<div>
+    <p><b>Name:</b> {{ app.applicant.username }}</p>
+    <p><b>Applied on:</b> {{ app.applied_at }}</p>
+</div>
+<hr>
+{% empty %}
+<p>No applicants yet</p>
+{% endfor %}
+
+{% endblock %}
